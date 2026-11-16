@@ -1,0 +1,30 @@
+# Build artifacts (C++ / CUDA)
+build/
+*.o
+*.obj
+*.out
+*.exe
+*.so
+*.dll
+
+# Dữ liệu nhị phân lớn (.bin) - sinh tự động hoặc lưu trên Google Drive
+*.bin
+data/
+!tests/sample_data/
+
+# Python cache & môi trường ảo
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+.pytest_cache/
+
+# Jupyter / Colab checkpoints
+.ipynb_checkpoints/
+
+# Hệ điều hành & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

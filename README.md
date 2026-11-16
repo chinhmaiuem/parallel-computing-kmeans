@@ -1,8 +1,8 @@
 # Đồ án Lập trình Tính toán Song song
 
-Dự án cài đặt, phân tích thiết kế theo mô hình **PCAM** và đánh giá hiệu năng song song trên **CPU (C++17)** và **GPU (NVIDIA CUDA)** cho 2 bài toán:
-1. **Bài A1 (Chung):** Tính tích vô hướng của 2 vector (CPU tuần tự vs CUDA Shared Memory Reduction).
-2. **Bài A2 (Riêng - Chủ đề 6):** Thuật toán phân cụm K-means song song:
+Dự án cài đặt, phân tích thiết kế theo mô hình **PCAM** và đánh giá hiệu năng song song trên **CPU (C++17)** và **GPU (NVIDIA CUDA)** cho 2 bài toán gắn với bài toán ứng dụng **Phân khúc hành vi khách hàng Thương mại điện tử (Customer Segmentation)**:
+1. **Bài A1 (Chung):** Tính tích vô hướng của 2 vector đặc trưng kích thước lớn (CPU tuần tự vs CUDA Shared Memory Reduction).
+2. **Bài A2 (Riêng - Chủ đề 6):** Thuật toán phân cụm K-means song song cho dữ liệu hành vi khách hàng ($10^4, 10^5, 10^6$ khách hàng):
    - Hỗ trợ 2 phương pháp khởi tạo tâm: **Random** và **K-means++**.
    - Cài đặt và so sánh 2 chiến lược xử lý tranh chấp (race condition) khi cập nhật tâm cụm:
      - `atomicAdd` trực tiếp trên **Global Memory**.
@@ -58,8 +58,8 @@ Trong notebook Google Colab (chọn Runtime -> Change runtime type -> **T4 GPU**
 !nvcc --version
 
 # Clone repo
-!git clone <URL_REPO_GITHUB_CUA_NHOM>
-%cd <TEN_THU_MUC_REPO>
+!git clone https://github.com/chinhmaiuem/parallel-computing-kmeans.git
+%cd parallel-computing-kmeans
 ```
 
 ### Bước 2: Cài đặt thư viện Python cần thiết
