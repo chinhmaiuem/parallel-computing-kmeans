@@ -32,3 +32,35 @@ Tài liệu này ghi nhận trung thực việc sử dụng các công cụ Trí
 
 ## Tuyên bố
 Nhóm chịu trách nhiệm về tính đúng đắn, bản quyền, số liệu thực nghiệm và mọi nội dung đã nộp.
+# Nhật ký Sử dụng Công cụ AI (AI Usage Log)
+
+> **Quy tắc chung để tránh xung đột Git (Merge Conflict):** 
+> Mỗi thành viên **chỉ chỉnh sửa và thêm dòng vào đúng bảng mang tên mình** bên dưới. Không chỉnh sửa phần tiêu đề chung hoặc bảng của thành viên khác.
+
+---
+
+## 1. Nhật ký của Thành viên 1: Nguyễn Đình Chính (`chinhmaiuem`)
+* **Phạm vi phụ trách:** Kiến trúc PCAM, Khung Header & `Makefile`, Bài A1 (Tích vô hướng CPU/CUDA), K-means tuần tự CPU (`kmeans_cpu.cpp`), Unit Test kiểm thử tính đúng đắn.
+
+| Ngày | Công cụ AI sử dụng | Tác vụ / Mục đích hỗ trợ | Phần code / File áp dụng | Cách kiểm chứng & Chỉnh sửa thủ công |
+| :--- | :--- | :--- | :--- | :--- |
+| 16/11/2026 | Gemini | Thiết kế cấu trúc Repo, phân chia vai trò nhóm và khung kế hoạch 8 tuần theo chuẩn PCAM | `README.md`, `CONTRIBUTIONS.md`, `AI_USAGE.md` | Rà soát lại danh sách file, chỉnh sửa thông tin thành viên và luồng nhánh Git `dev`/`main`. |
+| *(Thêm dòng mới tại đây)* | | | | |
+
+---
+
+## 2. Nhật ký của Thành viên 2: [Họ tên Thành viên 2] (`@[github_tv2]`)
+* **Phạm vi phụ trách:** Khởi tạo tâm K-means++ (`kmeans_init.cu`), các biến thể CUDA K-means (`kmeans_cuda_atomic.cu`, `kmeans_cuda_shmem.cu`), đo thời gian 4 pha (`main_kmeans.cu`).
+
+| Ngày | Công cụ AI sử dụng | Tác vụ / Mục đích hỗ trợ | Phần code / File áp dụng | Cách kiểm chứng & Chỉnh sửa thủ công |
+| :--- | :--- | :--- | :--- | :--- |
+| *(Thêm dòng mới tại đây)* | | | | |
+
+---
+
+## 3. Nhật ký của Thành viên 3: [Họ tên Thành viên 3] (`@[github_tv3]`)
+* **Phạm vi phụ trách:** Script sinh dữ liệu (`generate_data.py`), script chạy benchmark tự động trên Colab T4 (`run_benchmark.py`), vẽ biểu đồ (`plot_results.py`), Báo cáo LaTeX & Slide.
+
+| Ngày | Công cụ AI sử dụng | Tác vụ / Mục đích hỗ trợ | Phần code / File áp dụng | Cách kiểm chứng & Chỉnh sửa thủ công |
+| :--- | :--- | :--- | :--- | :--- |
+| *(Thêm dòng mới tại đây)* | | | | |
