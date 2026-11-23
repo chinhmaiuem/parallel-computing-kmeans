@@ -18,8 +18,8 @@ Dự án cài đặt, phân tích thiết kế theo mô hình **PCAM** và đán
 .
 ├── Makefile                    # Biên dịch C++17 & CUDA (-O3)
 ├── README.md                   # Hướng dẫn cài đặt & tái lập thí nghiệm
-├── CONTRIBUTIONS.md            # Phân công và tỷ lệ đóng góp 3 thành viên
-├── AI_USAGE.md                 # Nhật ký công khai sử dụng AI
+├── CONTRIBUTIONS.md            # Phân công nhiệm vụ 3 thành viên
+├── AI_USAGE.md                 # Nhật ký công khai sử dụng AI (tổng hợp)
 ├── include/                    # Header dùng chung (timer, CUDA_CHECK, I/O .bin)
 ├── src/
 │   ├── a1_dot_product/         # Mã nguồn Bài A1
@@ -28,7 +28,7 @@ Dự án cài đặt, phân tích thiết kế theo mô hình **PCAM** và đán
 ├── tests/                      # Bộ kiểm thử đối chiếu với scikit-learn
 ├── notebooks/                  # Notebook chạy trên Google Colab + Drive
 ├── results/                    # Dữ liệu CSV và biểu đồ kết quả
-└── docs/                       # Sơ đồ PCAM (Draw.io), Báo cáo & Slide
+└── docs/                       # Sơ đồ PCAM (Draw.io), log AI (ai_logs/), Báo cáo & Slide
 ```
 
 ---
@@ -88,3 +88,28 @@ Trong notebook Google Colab (chọn Runtime -> Change runtime type -> **T4 GPU**
 !python3 scripts/run_benchmark.py --data-dir /content/drive/MyDrive/parallel_project/data --runs 5 --out results/raw/benchmark.csv
 !python3 scripts/plot_results.py --input results/raw/benchmark.csv --out-dir results/figures
 ```
+
+---
+
+## 4. Quy trình Git & Hướng dẫn Tạo nhánh cho Thành viên (GitHub Desktop)
+
+Để đảm bảo mỗi thành viên có lịch sử commit riêng minh bạch và không gây xung đột code (Merge Conflict), cả nhóm thực hiện đúng 4 bước sau:
+
+1. **Clone repo & kiểm tra tài khoản commit (làm 1 lần đầu):**
+   - Mở **GitHub Desktop** $\rightarrow$ **File $\rightarrow$ Clone repository...** $\rightarrow$ chọn `chinhmaiuem/parallel-computing-kmeans`.
+   - Vào **File $\rightarrow$ Options $\rightarrow$ Git** kiểm tra **Name** và **Email** khớp đúng tài khoản GitHub cá nhân của mình.
+2. **Tạo nhánh riêng từ `dev` (không code trực tiếp lên `main` hay `dev`):**
+   - Bấm **Current Branch** $\rightarrow$ chọn **`dev`** $\rightarrow$ bấm **Fetch origin / Pull origin** để lấy bản mới nhất.
+   - Bấm **Current Branch $\rightarrow$ New Branch** và đặt đúng tên nhánh được phân công trong `CONTRIBUTIONS.md`:
+     - Thành viên 1: `feat/a1-and-baseline`
+     - Thành viên 2: `feat/a2-cuda-kernels`
+     - Thành viên 3: `feat/data-benchmark`
+   - Bấm **Publish branch** để đẩy nhánh lên GitHub.
+3. **Code, ghi log AI & Commit thường xuyên:**
+   - Chỉ chỉnh sửa các file thuộc phạm vi phụ trách của mình (và điền thông tin cá nhân vào dòng tương ứng trong `CONTRIBUTIONS.md`).
+   - Mỗi lần dùng AI hỗ trợ, ghi ngay 1 mục (đủ 10 trường) vào file riêng của mình trong `docs/ai_logs/` (`tv1.md`, `tv2.md`, `tv3.md`).
+   - Hoàn thành mỗi phần nhỏ $\rightarrow$ gõ **Summary** rõ nghĩa (VD: `feat: implement kmeans atomicAdd kernel`) $\rightarrow$ **Commit** $\rightarrow$ **Push origin**.
+4. **Gửi bài vào `dev` (Pull Request):**
+   - Khi xong một đầu việc, bấm **Create Pull Request** trên GitHub Desktop.
+   - Trên GitHub Web, đổi nhánh đích (**`base:`**) thành **`dev`** (`base: dev <- compare: feat/...`) $\rightarrow$ bấm **Create pull request** để Nhóm trưởng kiểm tra và **Merge** (giữ chế độ mặc định *Create a merge commit*).
+   - Khi cần lấy code mới nhất từ đồng đội về nhánh mình: đứng ở nhánh riêng $\rightarrow$ **Fetch origin** $\rightarrow$ **Branch $\rightarrow$ Merge into current branch...** $\rightarrow$ chọn **`dev`**.

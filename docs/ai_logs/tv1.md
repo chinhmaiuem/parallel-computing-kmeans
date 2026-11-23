@@ -6,7 +6,7 @@
 
 ### 1
 - **Thời gian:** 2026-11-15
-- **Người sử dụng:** Thành viên 1
+- **Người sử dụng:** Nguyễn Đình Chính (`chinhmaiuem`) — Thành viên 1
 - **Công cụ/mô hình:** Antigravity (Google DeepMind)
 - **Mục đích:** Lập kế hoạch triển khai dự án (8 tuần / theo luồng công việc độc lập), thiết kế cấu trúc thư mục và tạo các file khung (`Makefile`, `README.md`, `CONTRIBUTIONS.md`, `AI_USAGE.md`, `.gitignore`).
 - **Prompt hoặc tóm tắt prompt:** Lập Implementation Plan cho Bài A1 (tích vô hướng 2 vector) và Bài A2 (K-means song song CUDA với `atomicAdd` vs `Shared Memory`, chủ đề Phân khúc khách hàng), chia việc 3 thành viên tránh xung đột Git và khởi tạo file khung.
